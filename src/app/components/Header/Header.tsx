@@ -7,7 +7,7 @@ export const Header = (): JSX.Element => {
   return (
     <header className="header">
       <div className="headerLogo">
-        <img src={logo} />
+        <img src={logo} alt="logo" />
       </div>
       <div className="headerNav">
         <p className="headerNavBlue">Coming Soon</p>
