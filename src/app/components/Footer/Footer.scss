@@ -1,0 +1,58 @@
+// SCSS base
+@import "../../App.scss";
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .footerContact {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    line-height: 1.2em;
+
+    transform: rotate(-90deg);
+    width: fit-content;
+    margin-left: -30px;
+
+    a {
+      color: $color-3d-black;
+
+      &:visited,
+      &:link,
+      &:active {
+        text-decoration: none;
+      }
+      &:hover {
+        color: gray;
+        text-decoration: none;
+      }
+    }
+  }
+  .footerSocial {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    font-size: 0.9em;
+
+    text-align: end;
+    color: $color-text;
+
+    a {
+      color: $color-text;
+
+      &:visited,
+      &:link,
+      &:active {
+        text-decoration: none;
+      }
+      &:hover {
+        color: gray;
+        text-decoration: none;
+      }
+      p {
+        margin-top: 0.6em;
+        margin-bottom: 0.6em;
+      }
+    }
+  }
+}

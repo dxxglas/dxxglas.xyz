@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Cocogoose";
+  src: url("../assets/cocogoose.ttf");
+}
+
+$color-bg: #ededed;
+$color-text: #1d1d1b;
+$color-3d-black: #0d0e0e;
+$color-3d-red: #e42320;
+$color-3d-blue: #6ec6d8;
+
+body {
+  margin: 0;
+  font-family: "Cocogoose", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: $color-bg;
+
+  .app {
+    margin: 3em 4em;
+
+    height: calc(100vh - 6em);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+    height: calc(100vh - 4em);
+
+    .app {
+      margin: 2em;
+    }
+  }
+}
