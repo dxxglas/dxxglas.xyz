@@ -14,5 +14,27 @@
     text-transform: uppercase;
     font-size: 1.2em;
     line-height: 1.2em;
+    position: relative;
+
+    width: 152px;
+
+    .headerNavBlack {
+      position: absolute;
+      color: $color-3d-black;
+    }
+    .headerNavBlue {
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      color: $color-3d-blue;
+      width: fit-content;
+    }
+    .headerNavRed {
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      color: $color-3d-red;
+      width: fit-content;
+    }
   }
 }
