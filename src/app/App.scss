@@ -3,7 +3,11 @@
   src: url("../assets/cocogoose.ttf");
 }
 
-$bg-color: #ededed;
+$color-bg: #ededed;
+$color-text: #1d1d1b;
+$color-3d-black: #0d0e0e;
+$color-3d-red: #e42320;
+$color-3d-blue: #6ec6d8;
 
 body {
   margin: 0;
@@ -13,9 +17,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: $bg-color;
+  background-color: $color-bg;
 
   .app {
-    margin: 3em;
+    margin: 3em 6em;
+
+    height: calc(100vh - 6em);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
