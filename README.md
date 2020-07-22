@@ -2,7 +2,7 @@
 
 ## About
 
-Project to create a personal portfolio.
+project to create a personal portfolio, using React and Typescript.
 
 ## Development
 
@@ -15,7 +15,7 @@ Project to create a personal portfolio.
     - `bugfix-issue`: adjustment issues
 
 - Commits must be made in English, following the model:
-    - **feature-issue** + : + description = `feature-issue: description`
+    - **[first-letter]-issue** + : + description = `f-issue: it was done`
 
 ### To run this project
 
