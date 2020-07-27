@@ -4,7 +4,7 @@ import "./Footer.scss";
 export const Footer = (): JSX.Element => {
   return (
     <footer className="footer">
-      <div className="footerContact">
+      <div className="footerContact glitchOnHover" data-text="Contact">
         <a href="mailto:me@dxxglas.xyz">Contact</a>
       </div>
       <div className="footerSocial">

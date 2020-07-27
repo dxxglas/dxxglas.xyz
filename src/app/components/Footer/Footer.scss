@@ -24,10 +24,6 @@
       &:active {
         text-decoration: none;
       }
-      &:hover {
-        color: gray;
-        text-decoration: none;
-      }
     }
   }
   .footerSocial {
@@ -35,10 +31,10 @@
     font-size: 0.9em;
 
     text-align: end;
-    color: $color-text;
+    color: $color-3d-black;
 
     a {
-      color: $color-text;
+      color: $color-3d-black;
 
       &:visited,
       &:link,
