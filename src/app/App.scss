@@ -18,6 +18,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: $color-bg;
+  color: $color-3d-black;
 
   .app {
     margin: 3em 4em;
@@ -37,5 +38,133 @@ body {
     .app {
       margin: 2em;
     }
+  }
+}
+
+// Glitch Animation
+
+.glitch {
+  &:before,
+  &:after {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    content: attr(data-text);
+
+    top: -3.5%;
+    left: 0.1%;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:after {
+    color: $color-3d-red;
+    z-index: -2;
+    transform: translate(2px, -2px);
+  }
+
+  &:before {
+    color: $color-3d-blue;
+    z-index: -1;
+    transform: translate(-2px, 2px);
+  }
+
+  &:hover {
+    &:before {
+      animation: glitch-blue 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+        reverse 1;
+    }
+    &:after {
+      animation: glitch-red 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+        reverse 1;
+    }
+  }
+}
+
+.glitchOnHover {
+  &:before,
+  &:after {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    content: attr(data-text);
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &:after {
+    color: $color-3d-red;
+    z-index: -2;
+  }
+
+  &:before {
+    color: $color-3d-blue;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:before {
+      animation: glitch-blue 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1;
+    }
+    &:after {
+      animation: glitch-red 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1;
+    }
+  }
+}
+
+@keyframes glitch-blue {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  75% {
+    -webkit-transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
+  }
+  to {
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes glitch-red {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  50% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  75% {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+  }
+  to {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
 }
