@@ -10,9 +10,9 @@ export const Header = (): JSX.Element => {
         <img src={logo} alt="logo" />
       </div>
       <div className="headerNav">
-        <p className="headerNavBlue">Coming Soon</p>
-        <p className="headerNavRed">Coming Soon</p>
-        <p className="headerNavBlack">Coming Soon</p>
+        <p className="headerNavText" data-text="Coming Soon">
+          Coming Soon
+        </p>
       </div>
     </header>
   );
