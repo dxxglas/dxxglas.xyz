@@ -1,13 +1,13 @@
 import * as React from "react";
 import "./Header.scss";
 
-import logo from "../../../assets/logo.svg";
+import Logo from "../../../assets/logo.svg";
 
 export const Header = (): JSX.Element => {
   return (
     <header className="header">
       <div className="headerLogo">
-        <img src={logo} alt="logo" />
+        <img src={Logo} alt="logo" />
       </div>
       <div className="headerNav">
         <p className="headerNavText glitch" data-text="Coming Soon">

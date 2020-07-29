@@ -1,6 +1,12 @@
 import * as React from "react";
 import "./Footer.scss";
 
+import { SocialIcon } from "../SocialIcon/SocialIcon";
+
+import LinkedIn from "../../../assets/socialIcons/linkedin.svg";
+import GitHub from "../../../assets/socialIcons/github.svg";
+import Behance from "../../../assets/socialIcons/behance.svg";
+
 export const Footer = (): JSX.Element => {
   return (
     <footer className="footer">
@@ -8,27 +14,21 @@ export const Footer = (): JSX.Element => {
         <a href="mailto:me@dxxglas.xyz">Contact</a>
       </div>
       <div className="footerSocial">
-        <a
+        <SocialIcon
+          name="linkedin"
           href="https://linkedin.com/in/dxxglas"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>linkedin.com/in/dxxglas</p>
-        </a>
-        <a
+          icon={LinkedIn}
+        />
+        <SocialIcon
+          name="github"
           href="https://github.com/dxxglas"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>github.com/dxxglas</p>
-        </a>
-        <a
+          icon={GitHub}
+        />
+        <SocialIcon
+          name="behance"
           href="https://behance.net/dxxglas"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <p>behance.net/dxxglas</p>
-        </a>
+          icon={Behance}
+        />
       </div>
     </footer>
   );
