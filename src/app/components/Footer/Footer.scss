@@ -27,28 +27,36 @@
       }
     }
   }
-  .footerSocial {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-    font-size: 0.9em;
 
-    text-align: end;
-    color: $color-3d-black;
+  .footerBox {
+    .footerLanguage {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+      font-size: 0.9em;
+    }
+    .footerSocial {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    a {
+      text-align: end;
       color: $color-3d-black;
 
-      &:visited,
-      &:link,
-      &:active {
-        text-decoration: none;
-      }
-      &:hover {
-        color: gray;
-        text-decoration: none;
-      }
-      p {
-        margin-top: 0.6em;
-        margin-bottom: 0.6em;
+      a {
+        color: $color-3d-black;
+
+        &:visited,
+        &:link,
+        &:active {
+          text-decoration: none;
+        }
+        &:hover {
+          color: gray;
+          text-decoration: none;
+        }
+        p {
+          margin-top: 0.6em;
+          margin-bottom: 0.6em;
+        }
       }
     }
   }
