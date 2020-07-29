@@ -20,6 +20,10 @@ body {
   background-color: $color-bg;
   color: $color-3d-black;
 
+  a {
+    text-decoration: none;
+  }
+
   .app {
     margin: 3em 4em;
 
@@ -33,11 +37,73 @@ body {
 @media screen and (max-width: 600px) {
   body {
     width: 100vw;
-    height: calc(100vh - 4em);
+    height: calc(100% - 4em);
 
     .app {
       margin: 2em;
     }
+  }
+}
+
+// Background Animation
+
+.background {
+  position: fixed;
+  pointer-events: none;
+  -webkit-animation: grain 1s steps(4) infinite;
+  animation: grain 1s steps(4) infinite;
+  background-image: url("../assets/grain.png");
+  height: 200%;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  opacity: 0.5;
+}
+
+@keyframes grain {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(-5%, -5%);
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    -webkit-transform: translate(-10%, 5%);
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    -webkit-transform: translate(5%, -10%);
+    transform: translate(5%, -10%);
+  }
+  40% {
+    -webkit-transform: translate(-5%, 15%);
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    -webkit-transform: translate(-10%, 5%);
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    -webkit-transform: translate(15%, 0);
+    transform: translate(15%, 0);
+  }
+  70% {
+    -webkit-transform: translate(0, 10%);
+    transform: translate(0, 10%);
+  }
+  80% {
+    -webkit-transform: translate(-15%, 0);
+    transform: translate(-15%, 0);
+  }
+  90% {
+    -webkit-transform: translate(10%, 5%);
+    transform: translate(10%, 5%);
+  }
+  to {
+    -webkit-transform: translate(5%, 0);
+    transform: translate(5%, 0);
   }
 }
 
@@ -46,17 +112,14 @@ body {
 .glitch {
   &:before,
   &:after {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: block;
 
     position: absolute;
 
     content: attr(data-text);
 
-    top: -3.5%;
-    left: 0.1%;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
   }
