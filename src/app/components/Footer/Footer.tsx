@@ -16,6 +16,7 @@ export const Footer = (): JSX.Element => {
       <div className="footerBox">
         <div className="footerLanguage">
           <p>EN</p>
+          <span>|</span>
           <p>PT</p>
         </div>
         <div className="footerSocial">

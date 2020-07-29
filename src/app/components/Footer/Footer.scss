@@ -31,33 +31,27 @@
   .footerBox {
     .footerLanguage {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-      font-size: 0.9em;
+      font-size: 0.8em;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      p {
+        &:hover {
+          color: gray;
+          text-decoration: none;
+        }
+      }
+
+      span {
+        margin: 0.5em;
+      }
     }
     .footerSocial {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      text-align: end;
-      color: $color-3d-black;
-
-      a {
-        color: $color-3d-black;
-
-        &:visited,
-        &:link,
-        &:active {
-          text-decoration: none;
-        }
-        &:hover {
-          color: gray;
-          text-decoration: none;
-        }
-        p {
-          margin-top: 0.6em;
-          margin-bottom: 0.6em;
-        }
-      }
     }
   }
 }
