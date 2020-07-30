@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import * as React from "react";
 import "./Footer.scss";
 
 import { useTranslation } from "react-i18next";
