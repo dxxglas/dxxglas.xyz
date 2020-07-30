@@ -5,20 +5,32 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   .headerLogo {
-    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 3em;
+    }
   }
 
   .headerNav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
     text-transform: uppercase;
-    font-size: 1.2em;
-    line-height: 1.2em;
-    position: relative;
+    font-size: 1.1em;
+    line-height: 1.1em;
 
     .headerNavText {
-      // position: absolute;
+      position: relative;
       color: $color-3d-black;
+
+      margin: 0.3em 0;
     }
   }
 }
