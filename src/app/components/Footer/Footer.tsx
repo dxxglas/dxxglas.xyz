@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { MouseEvent } from "react";
 import "./Footer.scss";
 
 import { useTranslation } from "react-i18next";
@@ -11,16 +11,35 @@ import Behance from "../../../assets/socialIcons/behance.svg";
 export const Footer = (): JSX.Element => {
   const { t, i18n } = useTranslation();
 
+  const changeLanguage = (value: string) => {
+    i18n.changeLanguage(value);
+  };
+
   return (
     <footer className="footer">
-      <div className="footerContact glitchOnHover" data-text="Contact">
+      <div
+        className="footerContact glitchOnHover"
+        data-text={t("footer.contact")}
+      >
         <a href="mailto:me@dxxglas.xyz">{t("footer.contact")}</a>
       </div>
       <div className="footerBox">
         <div className="footerLanguage">
-          <p>EN</p>
+          <p
+            onClick={() => {
+              changeLanguage("en");
+            }}
+          >
+            EN
+          </p>
           <span>|</span>
-          <p>PT</p>
+          <p
+            onClick={() => {
+              changeLanguage("br");
+            }}
+          >
+            BR
+          </p>
         </div>
         <div className="footerSocial">
           <SocialIcon
