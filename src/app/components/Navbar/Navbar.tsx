@@ -10,5 +10,10 @@ export const Navbar = (): JSX.Element => {
     i18n.changeLanguage(value);
   };
 
-  return <nav className="navbar"></nav>;
+  return (
+    <nav className="navbar">
+      <h1 className="navTitle">menu</h1>
+      <div className="navBox"></div>
+    </nav>
+  );
 };

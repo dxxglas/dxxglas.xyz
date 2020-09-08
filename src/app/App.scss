@@ -4,10 +4,9 @@
 }
 
 $color-bg: #f8f8f8;
-$color-bg-dark: #1e1e1e;
-$color-3d-black: #000000;
-$color-3d-red: #f31310;
-$color-3d-blue: #00d5ff;
+$color-black: #1f1f1f;
+$color-red: #f31310;
+$color-blue: #00d5ff;
 
 body {
   margin: 0;
@@ -18,7 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: $color-bg;
-  color: $color-3d-black;
+  color: $color-black;
 
   a {
     text-decoration: none;
@@ -58,6 +57,8 @@ body {
   top: -50%;
   width: 200%;
   opacity: 0.5;
+
+  z-index: 2;
 }
 
 @keyframes grain {
