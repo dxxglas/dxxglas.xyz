@@ -1,19 +1,14 @@
 import * as React from "react";
-import "./Navbar.scss";
+import "./Menu.scss";
 
 import { useTranslation } from "react-i18next";
 
-export const Navbar = (): JSX.Element => {
+export const Menu = (): JSX.Element => {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (value: string) => {
     i18n.changeLanguage(value);
   };
 
-  return (
-    <nav className="navbar">
-      <h1 className="navTitle">menu</h1>
-      <div className="navBox"></div>
-    </nav>
-  );
+  return <div className="menu"></div>;
 };

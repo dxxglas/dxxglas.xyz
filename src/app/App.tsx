@@ -4,13 +4,13 @@ import "./App.scss";
 import "../providers/i18n";
 
 import { Header } from "./components/Header/Header";
-import { Navbar } from "./components/Navbar/Navbar";
+import { Menu } from "./components/Menu/Menu";
 
 export const App = () => {
   return (
     <div className="app">
       <Header />
-      <Navbar />
+      <Menu />
       <div className="background"></div>
     </div>
   );

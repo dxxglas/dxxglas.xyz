@@ -10,7 +10,7 @@ type CardProps = {
 export const SocialBar = ({ name, href, icon }: CardProps): JSX.Element => {
   return (
     <a
-      className="SocialBar"
+      className="socialBar"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
