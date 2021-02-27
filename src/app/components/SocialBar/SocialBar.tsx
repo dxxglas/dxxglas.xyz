@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./SocialIcon.scss";
+import "./SocialBar.scss";
 
 type CardProps = {
   name: string;
@@ -7,10 +7,10 @@ type CardProps = {
   icon: string;
 };
 
-export const SocialIcon = ({ name, href, icon }: CardProps): JSX.Element => {
+export const SocialBar = ({ name, href, icon }: CardProps): JSX.Element => {
   return (
     <a
-      className="socialIcon"
+      className="SocialBar"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
