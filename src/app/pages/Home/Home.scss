@@ -1,2 +1,10 @@
 // SCSS base
 @import "../../App.scss";
+
+.home {
+  .socialBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

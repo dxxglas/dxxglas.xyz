@@ -1,24 +1,18 @@
 // SCSS base
 @import "../../App.scss";
 
-.header {
+.navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
 
-  .headerLogo {
+  .navbarLogo {
     display: flex;
     align-items: center;
     justify-content: center;
     img {
       width: 2.8em;
     }
-  }
-
-  .headerSocial {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
