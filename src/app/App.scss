@@ -3,7 +3,7 @@
   src: url("../assets/cocogoose.ttf");
 }
 
-$color-bg: #f8f8f8;
+$color-white: #f8f8f8;
 $color-black: #1f1f1f;
 $color-red: #f31310;
 $color-blue: #00d5ff;
@@ -16,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: $color-bg;
+  background-color: $color-white;
   color: $color-black;
 
   a {
