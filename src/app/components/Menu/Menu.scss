@@ -54,12 +54,11 @@
       line-height: 26px;
 
       display: flex;
-      align-items: center;
+      justify-content: center;
       letter-spacing: 0.15em;
       transform: rotate(270deg);
-
-      margin-left: -19px;
-      margin-bottom: 20px;
+      white-space: nowrap;
+      width: 26px;
 
       cursor: pointer;
     }
@@ -108,7 +107,7 @@
       position: absolute;
       right: 4em;
 
-      .auxiliar {
+      .secondary {
         font-size: 12px;
         margin: 0.7em 0;
 
@@ -149,8 +148,12 @@
 
     &.open {
       height: 100vh;
-
       padding: 2em;
+
+      .closeTitle {
+        justify-content: unset;
+        margin-bottom: 1px;
+      }
 
       .menuContainer {
         display: flex;
