@@ -4,7 +4,16 @@ import "./Menu.scss";
 import { useTranslation } from "react-i18next";
 
 export const Menu = ({ isOpen, setMenuStatus }: any): JSX.Element => {
-  const menu = ["about", "posts", "contact", "random"];
+  const menu = [
+    {
+      title: "about",
+      subtitle: "###",
+    },
+    {
+      title: "portfolio",
+      subtitle: "###",
+    },
+  ];
 
   const { t, i18n } = useTranslation();
 
@@ -23,10 +32,10 @@ export const Menu = ({ isOpen, setMenuStatus }: any): JSX.Element => {
         close
       </p>
       <div className="menuContainer">
-        {menu.map((title) => (
+        {menu.map((obj) => (
           <div className="menuBox">
-            <p className="title">{title}</p>
-            <p className="subtitle">###</p>
+            <p className="title">{obj.title}</p>
+            <p className="subtitle">{obj.subtitle}</p>
           </div>
         ))}
       </div>

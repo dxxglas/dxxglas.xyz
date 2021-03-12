@@ -33,7 +33,24 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+// Default Media Query
+
+$mobile-width: 767px;
+$tablet-width: 1024px;
+
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@include mobile() {
   body {
     width: 100vw;
 
