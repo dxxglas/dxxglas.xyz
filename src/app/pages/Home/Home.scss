@@ -12,7 +12,7 @@
   position: relative;
 
   .socialBar {
-    width: 80px;
+    width: 90px;
 
     position: absolute;
     top: 0;
@@ -66,7 +66,7 @@
     .blueElements {
       position: absolute;
       top: 27px;
-      right: 54px;
+      right: 67px;
       z-index: -1;
 
       display: flex;
@@ -93,7 +93,7 @@
       justify-content: center;
       align-items: center;
 
-      margin-left: -45px;
+      margin-left: -20px;
       margin-top: 10px;
 
       .circleRed {
@@ -123,7 +123,7 @@
       align-items: center;
 
       position: absolute;
-      right: 55px;
+      right: 60px;
       top: 95px;
 
       .squareBlack {
@@ -141,6 +141,38 @@
         margin-right: -3px;
 
         border: 1px solid $color-black;
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .home {
+    .titleBox {
+      width: 260px;
+      bottom: unset;
+      left: unset;
+      flex-wrap: wrap;
+
+      .rectangleBox {
+        position: absolute;
+        top: -100px;
+        left: -10px;
+      }
+
+      h1 {
+        width: 250px;
+        font-size: 1.4em;
+      }
+
+      .blueElements {
+        top: 75px;
+      }
+
+      .redElements {
+        position: absolute;
+        top: -50px;
+        right: 50px;
       }
     }
   }
