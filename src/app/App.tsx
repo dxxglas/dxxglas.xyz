@@ -2,12 +2,17 @@ import * as React from "react";
 import "./App.scss";
 import "../providers/i18n";
 
-import { Home } from "./pages/Home/Home";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Menu } from "./components/Menu/Menu";
 
 export const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
   return (
     <div className="app">
-      <Home />
+      <Navbar setMenuStatus={setIsMenuOpen} isOpen={isMenuOpen} />
+      <Menu setMenuStatus={setIsMenuOpen} isOpen={isMenuOpen} />
+      <div className="background"></div>
     </div>
   );
 };

@@ -1,5 +1,11 @@
-
 {
-    "header.title": "Coming Soon",
-    "footer.contact": "Contact"
+    "menu.frist": [
+        "about",
+        "###"
+    ],
+    "menu.second": [
+        "portfolio",
+        "###"
+    ],
+    "menu.close": "close"
 }

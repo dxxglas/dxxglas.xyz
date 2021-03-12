@@ -1,0 +1,19 @@
+// SCSS base
+@import "../../App.scss";
+
+.socialBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1em;
+  margin-right: 0;
+  margin-bottom: 0;
+
+  img {
+    height: 1.2em;
+    &:hover {
+      animation: glitch 0.2s both;
+    }
+  }
+}

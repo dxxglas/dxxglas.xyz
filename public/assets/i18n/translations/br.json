@@ -1,5 +1,11 @@
-
 {
-    "header.title": "Em breve",
-    "footer.contact": "Contato"
+    "menu.frist": [
+        "sobre",
+        "###"
+    ],
+    "menu.second": [
+        "portfólio",
+        "###"
+    ],
+    "menu.close": "fechar"
 }

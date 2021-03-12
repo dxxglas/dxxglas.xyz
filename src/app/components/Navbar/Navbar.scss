@@ -1,0 +1,36 @@
+// SCSS base
+@import "../../App.scss";
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+
+  .navbarLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 2.8em;
+    }
+  }
+
+  .menuTitle {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15em;
+    transform: rotate(270deg);
+
+    padding-left: 10px;
+    margin-left: -25px;
+
+    cursor: pointer;
+  }
+}
