@@ -3,11 +3,10 @@
   src: url("../assets/cocogoose.ttf");
 }
 
-$color-bg: #f8f8f8;
-$color-bg-dark: #1e1e1e;
-$color-3d-black: #000000;
-$color-3d-red: #f31310;
-$color-3d-blue: #00d5ff;
+$color-white: #f8f8f8;
+$color-black: #1f1f1f;
+$color-red: #f31310;
+$color-blue: #00d5ff;
 
 body {
   margin: 0;
@@ -17,8 +16,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: $color-bg;
-  color: $color-3d-black;
+  background-color: $color-white;
+  color: $color-black;
 
   a {
     text-decoration: none;
@@ -29,12 +28,33 @@ body {
 
     height: calc(100vh - 6em);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+
+    .content {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
-@media screen and (max-width: 600px) {
+// Default Media Query
+
+$mobile-width: 767px;
+$tablet-width: 1024px;
+
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@include mobile() {
   body {
     width: 100vw;
 
@@ -58,6 +78,8 @@ body {
   top: -50%;
   width: 200%;
   opacity: 0.5;
+
+  z-index: 2;
 }
 
 @keyframes grain {
@@ -109,125 +131,19 @@ body {
 
 // Glitch Animation
 
-.glitch {
-  &:before,
-  &:after {
-    display: block;
-
-    position: absolute;
-
-    content: attr(data-text);
-
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-
-  &:after {
-    color: $color-3d-red;
-    z-index: -2;
-    transform: translate(2px, -2px);
-  }
-
-  &:before {
-    color: $color-3d-blue;
-    z-index: -1;
-    transform: translate(-2px, 2px);
-  }
-
-  &:hover {
-    &:before {
-      animation: glitch-blue 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
-        reverse 1;
-    }
-    &:after {
-      animation: glitch-red 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
-        reverse 1;
-    }
-  }
-}
-
-.glitchOnHover {
-  &:before,
-  &:after {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-
-    content: attr(data-text);
-
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-
-  &:after {
-    color: $color-3d-red;
-    z-index: -2;
-  }
-
-  &:before {
-    color: $color-3d-blue;
-    z-index: -1;
-  }
-
-  &:hover {
-    &:before {
-      animation: glitch-blue 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1;
-    }
-    &:after {
-      animation: glitch-red 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 1;
-    }
-  }
-}
-
-@keyframes glitch-blue {
+@keyframes glitch {
   0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
+    transform: skew(0);
   }
   25% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  50% {
-    -webkit-transform: translate(2px, 2px);
-    transform: translate(2px, 2px);
+    transform: skew(5deg);
+    filter: invert(0.2);
   }
   75% {
-    -webkit-transform: translate(2px, 2px);
-    transform: translate(2px, 2px);
+    transform: skew(-5deg);
+    filter: invert(0.2);
   }
   to {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-}
-
-@keyframes glitch-red {
-  0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-  25% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  50% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
-  }
-  75% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
-  }
-  to {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
+    transform: skew(0);
   }
 }

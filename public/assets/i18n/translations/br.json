@@ -1,5 +1,12 @@
-
 {
-    "header.title": "Em breve",
-    "footer.contact": "Contato"
+    "menu.frist": [
+        "sobre",
+        "em breve"
+    ],
+    "menu.second": [
+        "portfólio",
+        "em breve"
+    ],
+    "menu.close": "fechar",
+    "home.title": "descobrindo outros mundos"
 }
