@@ -32,7 +32,24 @@ export const Home = (): JSX.Element => {
         />
       </div>
       <div className="titleBox">
+        <div className="rectangleBox">
+          {[...Array(5)].map((e, i) => (
+            <div className="rectangle" key={i} style={{ top: 5 * i }}></div>
+          ))}
+        </div>
         <h1>{t("home.title")}</h1>
+        <div className="blueElements">
+          <div className="rectangleBlue"></div>
+          <div className="squareBlue"></div>
+        </div>
+        <div className="redElements">
+          <div className="circleRed"></div>
+          <div className="circleOutline"></div>
+        </div>
+        <div className="blackElements">
+          <div className="squareBlack"></div>
+          <div className="squareOutline"></div>
+        </div>
       </div>
     </div>
   );

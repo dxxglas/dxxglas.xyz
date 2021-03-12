@@ -22,4 +22,126 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .titleBox {
+    width: 400px;
+
+    position: absolute;
+    bottom: 12em;
+    left: 2em;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    .rectangleBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+
+      margin: 1.6em;
+
+      .rectangle {
+        width: 30px;
+        height: 30px;
+
+        border: 1px solid $color-black;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+
+        position: absolute;
+      }
+    }
+
+    h1 {
+      width: 300px;
+      font-size: 1.6em;
+      font-weight: normal;
+      letter-spacing: 5px;
+      word-wrap: break-word;
+    }
+
+    .blueElements {
+      position: absolute;
+      top: 27px;
+      right: 54px;
+      z-index: -1;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .rectangleBlue {
+        width: 80px;
+        height: 8px;
+        background-color: $color-blue;
+        margin: 5px;
+      }
+
+      .squareBlue {
+        width: 8px;
+        height: 8px;
+        background-color: $color-blue;
+        margin: 5px;
+      }
+    }
+
+    .redElements {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-left: -45px;
+      margin-top: 10px;
+
+      .circleRed {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        background-color: $color-red;
+      }
+
+      .circleOutline {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        position: absolute;
+        margin-top: 4px;
+        margin-right: 7px;
+
+        border: 1px solid $color-black;
+      }
+    }
+
+    .blackElements {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      right: 55px;
+      top: 95px;
+
+      .squareBlack {
+        width: 11px;
+        height: 11px;
+        background-color: $color-black;
+      }
+
+      .squareOutline {
+        width: 10px;
+        height: 10px;
+
+        position: absolute;
+        margin-top: -3px;
+        margin-right: -3px;
+
+        border: 1px solid $color-black;
+      }
+    }
+  }
 }
