@@ -3,20 +3,20 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 import "../providers/i18n";
 
+import { Header } from "./components/Header/Header";
 import { Navbar } from "./components/Navbar/Navbar";
-import { Menu } from "./components/Menu/Menu";
 
 import { Home } from "./pages/Home/Home";
 
 export const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isNavbarOpen, setIsNavbarOpen] = React.useState(false);
 
   return (
     <div className="app">
       <Router>
         <div className="background"></div>
-        <Navbar setMenuStatus={setIsMenuOpen} isOpen={isMenuOpen} />
-        <Menu setMenuStatus={setIsMenuOpen} isOpen={isMenuOpen} />
+        <Header setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
+        <Navbar setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
         <div className="content">
           <Switch>
             <Route path="/">

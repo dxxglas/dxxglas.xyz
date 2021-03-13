@@ -1,12 +1,12 @@
 {
-    "menu.frist": [
+    "navbar.frist": [
         "about",
         "comming soon"
     ],
-    "menu.second": [
+    "navbar.second": [
         "portfolio",
         "comming soon"
     ],
-    "menu.close": "close",
+    "navbar.close": "close",
     "home.title": "discovering other worlds"
 }

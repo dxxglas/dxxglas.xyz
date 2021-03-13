@@ -1,22 +1,65 @@
 import * as React from "react";
 import "./Navbar.scss";
 
-import Logo from "../../../assets/logo.svg";
+import { useTranslation } from "react-i18next";
 
-export const Navbar = ({ setMenuStatus }: any): JSX.Element => {
+export const Navbar = ({ isOpen, setNavbarStatus }: any): JSX.Element => {
+  const { t, i18n } = useTranslation();
+
+  let language: string = i18n.language;
+  let languageSecondary: string = i18n.language === "en" ? "br" : "en";
+
+  const changeLanguage = (value: string) => {
+    i18n.changeLanguage(value);
+  };
+
+  const navbar = [
+    {
+      title: t("navbar.frist", { returnObjects: true })[0],
+      subtitle: t("navbar.frist", { returnObjects: true })[1],
+    },
+    {
+      title: t("navbar.second", { returnObjects: true })[0],
+      subtitle: t("navbar.second", { returnObjects: true })[1],
+    },
+  ];
+
   return (
-    <nav className="navbar">
-      <div className="navbarLogo">
-        <img src={Logo} alt="logo" />
-      </div>
+    <div className={isOpen ? "navbar open" : "navbar"}>
       <p
-        className="menuTitle"
+        className="closeTitle"
         onClick={() => {
-          setMenuStatus(true);
+          setNavbarStatus(false);
         }}
       >
-        menu
+        {t("navbar.close")}
       </p>
-    </nav>
+      <div className="navbarContainer">
+        {navbar.map((obj, index) => (
+          <div className="navbarBox" key={index}>
+            <p className="title">{obj.title}</p>
+            <p className="subtitle">{obj.subtitle}</p>
+          </div>
+        ))}
+      </div>
+      <div className="languageBox">
+        <p
+          className="secondary"
+          onClick={() => {
+            changeLanguage(languageSecondary);
+          }}
+        >
+          {languageSecondary === "br" ? "PT-BR" : "EN"}
+        </p>
+        <p
+          className="principal"
+          onClick={() => {
+            changeLanguage(language);
+          }}
+        >
+          {language === "br" ? "PT-BR" : "EN"}
+        </p>
+      </div>
+    </div>
   );
 };
