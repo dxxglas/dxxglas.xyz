@@ -1,12 +1,12 @@
 {
-    "menu.frist": [
+    "navbar.frist": [
         "sobre",
         "em breve"
     ],
-    "menu.second": [
+    "navbar.second": [
         "portfólio",
         "em breve"
     ],
-    "menu.close": "fechar",
+    "navbar.close": "fechar",
     "home.title": "descobrindo outros mundos"
 }

@@ -11,23 +11,28 @@
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.7",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "husky": "^4.2.5",
     "i18next": "^19.6.3",
     "i18next-xhr-backend": "^3.2.2",
     "lint-staged": "^10.2.11",
     "node-sass": "^4.14.1",
-    "prettier": "^2.0.5",
+    "prettier": "^2.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.7.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "typescript": "^3.7.5"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
     ]
   },
   "scripts": {
@@ -73,6 +78,10 @@
     ]
   },
   "devDependencies": {
-    "@types/prop-types": "^15.7.3"
+    "@types/prop-types": "^15.7.3",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }
