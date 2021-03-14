@@ -16,10 +16,10 @@ export const App = (): JSX.Element => {
             <div className="background"></div>
             <Header setNavbarStatus={setIsNavbarOpen} />
             <Navbar setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
-            <div className="content">
+            <main className="content">
                 <Home />
                 <About />
-            </div>
+            </main>
         </>
     );
 };

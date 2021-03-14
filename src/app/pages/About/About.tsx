@@ -13,7 +13,7 @@ export const About = (): JSX.Element => {
     const { t } = useTranslation();
 
     return (
-        <div className="about">
+        <section className="about">
             <div className="content">
                 <div className="elements">
                     <div className="circle">
@@ -61,6 +61,6 @@ export const About = (): JSX.Element => {
                 <p className="subtitle">{t('navbar.frist', { returnObjects: true })[1]}</p>
                 <h2 className="title">{t('navbar.frist', { returnObjects: true })[0]}</h2>
             </div>
-        </div>
+        </section>
     );
 };
