@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.scss';
 
 import { useTranslation } from 'react-i18next';
@@ -23,10 +24,12 @@ export const Navbar = ({
         {
             title: t('navbar.frist', { returnObjects: true })[0],
             subtitle: t('navbar.frist', { returnObjects: true })[1],
+            url: t('navbar.frist', { returnObjects: true })[2],
         },
         {
             title: t('navbar.second', { returnObjects: true })[0],
             subtitle: t('navbar.second', { returnObjects: true })[1],
+            url: t('navbar.second', { returnObjects: true })[2],
         },
     ];
 
@@ -42,10 +45,17 @@ export const Navbar = ({
             </p>
             <div className="navbarContainer">
                 {navbar.map((obj, index) => (
-                    <div className="navbarBox" key={index}>
+                    <Link
+                        to={obj.url}
+                        className="navbarBox"
+                        key={index}
+                        onClick={() => {
+                            setNavbarStatus(false);
+                        }}
+                    >
                         <p className="title">{obj.title}</p>
                         <p className="subtitle">{obj.subtitle}</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
             <div className="languageBox">
