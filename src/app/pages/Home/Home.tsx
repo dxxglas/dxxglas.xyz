@@ -29,7 +29,7 @@ export const Home = (): JSX.Element => {
                         <div className="rectangle" key={i} style={{ top: 5 * i }}></div>
                     ))}
                 </div>
-                <h1>{t('home.title')}</h1>
+                <h1 className="title">{t('home.title')}</h1>
                 <div className="blueElements">
                     <div className="rectangleBlue"></div>
                     <div className="squareBlue"></div>
