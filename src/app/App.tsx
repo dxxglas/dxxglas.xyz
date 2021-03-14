@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import '../providers/i18n';
 
@@ -14,21 +13,13 @@ export const App = (): JSX.Element => {
 
     return (
         <div className="app">
-            <Router>
-                <div className="background"></div>
-                <Header setNavbarStatus={setIsNavbarOpen} />
-                <Navbar setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
-                <div className="content">
-                    <Switch>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                        <Route path="/">
-                            <Home />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
+            <div className="background"></div>
+            <Header setNavbarStatus={setIsNavbarOpen} />
+            <Navbar setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
+            <div className="content">
+                <Home />
+                <About />
+            </div>
         </div>
     );
 };

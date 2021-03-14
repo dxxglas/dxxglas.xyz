@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.scss';
 
 import { useTranslation } from 'react-i18next';
@@ -45,8 +44,7 @@ export const Navbar = ({
             </p>
             <div className="navbarContainer">
                 {navbar.map((obj, index) => (
-                    <Link
-                        to={obj.url}
+                    <div
                         className="navbarBox"
                         key={index}
                         onClick={() => {
@@ -55,7 +53,7 @@ export const Navbar = ({
                     >
                         <p className="title">{obj.title}</p>
                         <p className="subtitle">{obj.subtitle}</p>
-                    </Link>
+                    </div>
                 ))}
             </div>
             <div className="languageBox">
