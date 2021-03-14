@@ -33,7 +33,7 @@ export const Navbar = ({
     ];
 
     return (
-        <div className={isOpen ? 'navbar open' : 'navbar'}>
+        <nav className={isOpen ? 'navbar open' : 'navbar'}>
             <p
                 className="closeTitle"
                 onClick={() => {
@@ -74,6 +74,6 @@ export const Navbar = ({
                     {language === 'br' ? 'PT-BR' : 'EN'}
                 </p>
             </div>
-        </div>
+        </nav>
     );
 };

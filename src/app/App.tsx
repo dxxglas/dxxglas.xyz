@@ -12,7 +12,7 @@ export const App = (): JSX.Element => {
     const [isNavbarOpen, setIsNavbarOpen] = React.useState(false);
 
     return (
-        <div className="app">
+        <>
             <div className="background"></div>
             <Header setNavbarStatus={setIsNavbarOpen} />
             <Navbar setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
@@ -20,6 +20,6 @@ export const App = (): JSX.Element => {
                 <Home />
                 <About />
             </div>
-        </div>
+        </>
     );
 };
