@@ -5,8 +5,8 @@ import '../providers/i18n';
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
 
-import { Home } from './pages/Home/Home';
-import { About } from './pages/About/About';
+import { Home } from './sections/Home/Home';
+import { About } from './sections/About/About';
 
 export const App = (): JSX.Element => {
     const [isNavbarOpen, setIsNavbarOpen] = React.useState(false);
@@ -16,7 +16,7 @@ export const App = (): JSX.Element => {
             <div className="background"></div>
             <Header setNavbarStatus={setIsNavbarOpen} />
             <Navbar setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
-            <main className="content">
+            <main className="main">
                 <Home />
                 <About />
             </main>
