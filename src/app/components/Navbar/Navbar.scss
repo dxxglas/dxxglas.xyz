@@ -1,36 +1,196 @@
 // SCSS base
-@import "../../App.scss";
+@import '../../App.scss';
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100%;
+    visibility: visible;
+    overflow: hidden;
+    opacity: 0;
 
-  .navbarLogo {
+    z-index: 10;
+
     display: flex;
     align-items: center;
-    justify-content: center;
 
-    img {
-      width: 2.8em;
+    width: 100%;
+    height: 0px;
+    background-color: transparent;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    padding: 0em 4em;
+    box-sizing: border-box;
+
+    color: transparent;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+    .closeTitle {
+        display: none;
     }
-  }
 
-  .menuTitle {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 26px;
+    .navbarContainer {
+        display: none;
+    }
 
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.15em;
-    transform: rotate(270deg);
+    .languageBox {
+        display: none;
+    }
 
-    padding-left: 10px;
-    margin-left: -25px;
+    &.open {
+        visibility: visible;
+        opacity: 1;
 
-    cursor: pointer;
-  }
+        height: 160px;
+        background-color: $color-black;
+
+        padding: 1em 4em;
+
+        color: $color-white;
+
+        .closeTitle {
+            @include cocogoose();
+            font-size: 18px;
+            line-height: 26px;
+
+            display: flex;
+            justify-content: center;
+            letter-spacing: 0.15em;
+            transform: rotate(270deg);
+            white-space: nowrap;
+            width: 26px;
+
+            cursor: pointer;
+        }
+
+        .navbarContainer {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 5vw;
+
+            .navbarBox {
+                margin: 0 3.5vw;
+                color: $color-white;
+
+                cursor: pointer;
+
+                .title {
+                    @include cocogoose();
+                    font-size: 18px;
+                    line-height: 26px;
+
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.15em;
+
+                    margin: 0.25em 0;
+
+                    &:hover {
+                        animation: glitch 0.2s both;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 12px;
+                    line-height: 16px;
+
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.15em;
+
+                    margin: 0.7em 0;
+                }
+            }
+        }
+
+        .languageBox {
+            display: block;
+            letter-spacing: 0.1em;
+            text-align: right;
+            margin-bottom: -18px;
+            position: absolute;
+            right: 4em;
+
+            .secondary {
+                font-size: 12px;
+                margin: 0.7em 0;
+
+                cursor: pointer;
+            }
+
+            .principal {
+                font-size: 16px;
+                font-weight: 900;
+                margin: 0.25em 0;
+                margin-bottom: 0px;
+
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@include tablet() {
+    .navbar {
+        &.open {
+            .navbarContainer {
+                margin: 0 3vw;
+                .navbarBox {
+                    margin: 0 2.3vw;
+                }
+            }
+        }
+    }
+}
+
+@include mobile() {
+    .navbar {
+        display: flex;
+        align-items: flex-end;
+
+        padding: 0 2em;
+
+        &.open {
+            height: 100vh;
+            padding: 2em;
+
+            .closeTitle {
+                justify-content: unset;
+                margin-bottom: 1px;
+            }
+
+            .navbarContainer {
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+
+                position: absolute;
+                right: 2em;
+                top: 2.5em;
+
+                .navbarBox {
+                    margin: 0.4em 0;
+
+                    .title {
+                        display: block;
+                        text-align: right;
+                    }
+
+                    .subtitle {
+                        display: block;
+                        text-align: right;
+                        margin: 0.3em 0;
+                    }
+                }
+            }
+
+            .languageBox {
+                margin-bottom: 0px;
+                right: 2em;
+            }
+        }
+    }
 }

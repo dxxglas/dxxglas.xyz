@@ -1,12 +1,17 @@
 {
-    "menu.frist": [
+    "navbar.frist": [
         "about",
-        "comming soon"
+        "###",
+        "about"
     ],
-    "menu.second": [
-        "portfolio",
-        "comming soon"
+    "navbar.second": [
+        "projects",
+        "comming soon",
+        " "
     ],
-    "menu.close": "close",
-    "home.title": "discovering other worlds"
+    "navbar.close": "close",
+    "home.title": "discovering other worlds",
+    "about.name": "Hello. I am",
+    "about.text": "I'm an artist, software engineering student and design enthusiast. I am currently working as a web developer for a product design team.",
+    "about.contact": "contact me"
 }

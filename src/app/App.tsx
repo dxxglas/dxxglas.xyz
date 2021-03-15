@@ -1,30 +1,25 @@
-import * as React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.scss";
-import "../providers/i18n";
+import * as React from 'react';
+import './App.scss';
+import '../providers/i18n';
 
-import { Navbar } from "./components/Navbar/Navbar";
-import { Menu } from "./components/Menu/Menu";
+import { Header } from './components/Header/Header';
+import { Navbar } from './components/Navbar/Navbar';
 
-import { Home } from "./pages/Home/Home";
+import { Home } from './sections/Home/Home';
+import { About } from './sections/About/About';
 
-export const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+export const App = (): JSX.Element => {
+    const [isNavbarOpen, setIsNavbarOpen] = React.useState(false);
 
-  return (
-    <div className="app">
-      <Router>
-        <div className="background"></div>
-        <Navbar setMenuStatus={setIsMenuOpen} isOpen={isMenuOpen} />
-        <Menu setMenuStatus={setIsMenuOpen} isOpen={isMenuOpen} />
-        <div className="content">
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-    </div>
-  );
+    return (
+        <>
+            <div className="background"></div>
+            <Header setNavbarStatus={setIsNavbarOpen} />
+            <Navbar setNavbarStatus={setIsNavbarOpen} isOpen={isNavbarOpen} />
+            <main className="main">
+                <Home />
+                <About />
+            </main>
+        </>
+    );
 };

@@ -1,0 +1,50 @@
+// SCSS base
+@import '../../App.scss';
+
+.header {
+    height: calc(100vh - 6em);
+    margin: 0 4em;
+
+    position: fixed;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .headerLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 2.8em;
+            cursor: pointer;
+        }
+    }
+
+    .navbarTitle {
+        @include cocogoose();
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 26px;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.15em;
+        transform: rotate(270deg);
+
+        padding-left: 10px;
+        margin-left: -25px;
+
+        cursor: pointer;
+    }
+}
+
+@include mobile() {
+    .header {
+        height: calc(100vh - 4em);
+        margin: 0 2em;
+    }
+}
