@@ -1,36 +1,49 @@
 // SCSS base
-@import "../../App.scss";
+@import '../../App.scss';
 
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100%;
+    height: calc(100vh - 6em);
+    margin: 0 4em;
 
-  .headerLogo {
+    position: fixed;
+    z-index: 5;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    img {
-      width: 2.8em;
+    .headerLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 2.8em;
+        }
     }
-  }
 
-  .navbarTitle {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 26px;
+    .navbarTitle {
+        @include cocogoose();
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 26px;
 
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.15em;
-    transform: rotate(270deg);
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.15em;
+        transform: rotate(270deg);
 
-    padding-left: 10px;
-    margin-left: -25px;
+        padding-left: 10px;
+        margin-left: -25px;
 
-    cursor: pointer;
-  }
+        cursor: pointer;
+    }
+}
+
+@include mobile() {
+    .header {
+        height: calc(100vh - 4em);
+        margin: 0 2em;
+    }
 }

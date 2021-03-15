@@ -10,34 +10,18 @@ $color-blue: #00d5ff;
 
 body {
     margin: 0;
-    font-family: 'Cocogoose', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     background-color: $color-white;
     color: $color-black;
 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     a {
         text-decoration: none;
-    }
-
-    .app {
-        margin: 3em 4em;
-
-        height: calc(100vh - 6em);
-        display: flex;
-        flex-direction: row;
-
-        .content {
-            width: 100%;
-            height: 100%;
-        }
     }
 }
 
 // Default Media Query
-
 $mobile-width: 767px;
 $tablet-width: 1024px;
 
@@ -53,19 +37,15 @@ $tablet-width: 1024px;
     }
 }
 
-@include mobile() {
-    body {
-        width: 100vw;
-
-        .app {
-            margin: 2em;
-            height: calc(100vh - 4em);
-        }
-    }
+// Cocogoose Font
+@mixin cocogoose {
+    font-family: 'Cocogoose', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // Background Animation
-
 .background {
     position: fixed;
     pointer-events: none;

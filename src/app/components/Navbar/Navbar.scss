@@ -6,7 +6,7 @@
     overflow: hidden;
     opacity: 0;
 
-    z-index: 100;
+    z-index: 10;
 
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@
     height: 0px;
     background-color: transparent;
 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
 
@@ -52,6 +52,7 @@
         color: $color-white;
 
         .closeTitle {
+            @include cocogoose();
             font-size: 18px;
             line-height: 26px;
 
@@ -75,6 +76,7 @@
                 color: $color-white;
 
                 .title {
+                    @include cocogoose();
                     font-size: 18px;
                     line-height: 26px;
 
@@ -90,7 +92,6 @@
                 }
 
                 .subtitle {
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     font-size: 12px;
                     line-height: 16px;
 
@@ -105,7 +106,6 @@
 
         .languageBox {
             display: block;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             letter-spacing: 0.1em;
             text-align: right;
             margin-bottom: -18px;

@@ -2,8 +2,9 @@
 @import '../../App.scss';
 
 .home {
-    width: 100%;
-    height: 100%;
+    width: calc(100vw - 8em);
+    height: calc(100vh - 6em);
+    margin: 3em 4em;
 
     display: flex;
     justify-content: center;
@@ -28,10 +29,12 @@
 
         position: absolute;
         bottom: 12em;
-        left: 2em;
+        left: 4em;
 
         display: flex;
         justify-content: space-evenly;
+
+        @include cocogoose();
 
         .rectangleBox {
             display: flex;
@@ -41,7 +44,7 @@
 
             position: relative;
 
-            margin: 1.6em;
+            margin: 2em;
 
             .rectangle {
                 width: 30px;
@@ -148,8 +151,12 @@
 
 @include mobile() {
     .home {
+        width: calc(100vw - 4em);
+        height: calc(100vh - 4em);
+        margin: 2em;
+
         .titleBox {
-            width: 260px;
+            width: 265px;
             bottom: unset;
             left: unset;
             flex-wrap: wrap;
@@ -160,20 +167,25 @@
                 left: -10px;
             }
 
-            h1 {
-                width: 280px;
-                font-size: 1.4em;
-                margin-left: -15px;
+            .title {
+                width: 232px;
+                font-size: 1.2em;
             }
 
             .blueElements {
-                top: 75px;
+                top: 80px;
+                right: 20px;
             }
 
             .redElements {
                 position: absolute;
                 top: -50px;
-                right: 35px;
+                right: 5px;
+            }
+
+            .blackElements {
+                top: 120px;
+                right: 80px;
             }
         }
     }

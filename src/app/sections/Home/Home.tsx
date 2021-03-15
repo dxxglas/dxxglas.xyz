@@ -13,7 +13,7 @@ export const Home = (): JSX.Element => {
     const { t } = useTranslation();
 
     return (
-        <div className="home">
+        <section className="home">
             <div className="socialBar">
                 <SocialIcon
                     name="linkedin"
@@ -43,6 +43,6 @@ export const Home = (): JSX.Element => {
                     <div className="squareOutline"></div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

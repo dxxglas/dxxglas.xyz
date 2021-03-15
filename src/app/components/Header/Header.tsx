@@ -5,9 +5,9 @@ import Logo from '../../../assets/logo.svg';
 
 export const Header = ({ setNavbarStatus }: { setNavbarStatus: any }): JSX.Element => {
     return (
-        <nav className="header">
+        <header className="header">
             <div className="headerLogo">
-                <img src={Logo} alt="logo" />
+                <img src={Logo} alt="logo-dxxglas" />
             </div>
             <p
                 className="navbarTitle"
@@ -17,6 +17,6 @@ export const Header = ({ setNavbarStatus }: { setNavbarStatus: any }): JSX.Eleme
             >
                 menu
             </p>
-        </nav>
+        </header>
     );
 };
