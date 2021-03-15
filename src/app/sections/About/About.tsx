@@ -10,11 +10,10 @@ export const About = (): JSX.Element => {
         <section className="about">
             <div className="content">
                 <div className="elements">
-                    <div className="circle">
-                        <div className="circleBackground"></div>
-                        <div className="circleOutline"></div>
-                    </div>
-                    <div className="triangle"></div>
+                    <p>#ART</p>
+                    <p>_code</p>
+                    <p>dESign</p>
+                    <p>™</p>
                 </div>
                 <div className="descriptionBox">
                     <div className="rectangleBox">
