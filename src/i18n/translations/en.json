@@ -1,0 +1,24 @@
+{
+    "test": "testei",
+    "navbar": {
+        "about": {
+            "title": "about",
+            "subtitle": "###",
+            "url": "about"
+        },
+        "projects": {
+            "title": "projects",
+            "subtitle": "comming soon",
+            "url": ""
+        },
+        "close": "close"
+    },
+    "home": {
+        "title": "discovering other worlds"
+    },
+    "about": {
+        "name": "Hello. I am",
+        "text": "I'm an artist, software engineer and design enthusiast.",
+        "contact": "contact me"
+    }
+}

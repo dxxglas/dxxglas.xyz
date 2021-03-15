@@ -75,6 +75,8 @@
                 margin: 0 3.5vw;
                 color: $color-white;
 
+                cursor: pointer;
+
                 .title {
                     @include cocogoose();
                     font-size: 18px;

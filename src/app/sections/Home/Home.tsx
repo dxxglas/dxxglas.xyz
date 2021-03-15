@@ -9,11 +9,13 @@ import LinkedIn from '../../../assets/socialIcons/linkedin.svg';
 import GitHub from '../../../assets/socialIcons/github.svg';
 import Behance from '../../../assets/socialIcons/behance.svg';
 
+import Scroll from '../../../assets/scroll.svg';
+
 export const Home = (): JSX.Element => {
     const { t } = useTranslation();
 
     return (
-        <section className="home">
+        <section className="home" id="home">
             <div className="socialBar">
                 <SocialIcon
                     name="linkedin"
@@ -42,6 +44,9 @@ export const Home = (): JSX.Element => {
                     <div className="squareBlack"></div>
                     <div className="squareOutline"></div>
                 </div>
+            </div>
+            <div className="scrollIcon">
+                <img src={Scroll} alt="scroll" />
             </div>
         </section>
     );

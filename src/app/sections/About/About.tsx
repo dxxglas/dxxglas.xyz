@@ -7,7 +7,7 @@ export const About = (): JSX.Element => {
     const { t } = useTranslation();
 
     return (
-        <section className="about">
+        <section className="about" id="about">
             <div className="content">
                 <div className="elements">
                     <p>#ART</p>
@@ -27,15 +27,15 @@ export const About = (): JSX.Element => {
                             <span className="name" data-text="dxxglas"></span>
                         </p>
                         <p>{t('about.text')}</p>
-                        <a href="mailto: me@dxxglas.xyz">
+                        <a href="mailto: dxxglas.xyz@gmail.com">
                             <p>{t('about.contact')}</p>
                         </a>
                     </div>
                 </div>
             </div>
             <div className="titleBox">
-                <p className="subtitle">{t('navbar.frist', { returnObjects: true })[1]}</p>
-                <h2 className="title">{t('navbar.frist', { returnObjects: true })[0]}</h2>
+                <p className="subtitle">{t('navbar.about.subtitle')}</p>
+                <h2 className="title">{t('navbar.about.title')}</h2>
             </div>
         </section>
     );
