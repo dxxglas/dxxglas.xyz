@@ -7,7 +7,7 @@ export const About = (): JSX.Element => {
     const { t } = useTranslation();
 
     return (
-        <section className="about">
+        <section className="about" id="about">
             <div className="content">
                 <div className="elements">
                     <p>#ART</p>

@@ -68,8 +68,8 @@
 
         .blueElements {
             position: absolute;
-            top: 27px;
-            right: 67px;
+            top: 30px;
+            right: 58px;
             z-index: -1;
 
             display: flex;
@@ -146,6 +146,12 @@
                 border: 1px solid $color-black;
             }
         }
+    }
+
+    .scrollIcon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 }
 

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import './Navbar.scss';
 
+import { Link } from 'react-scroll';
+
 import { useTranslation } from 'react-i18next';
 
 export const Navbar = ({
@@ -44,7 +46,12 @@ export const Navbar = ({
             </p>
             <div className="navbarContainer">
                 {navbar.map((obj, index) => (
-                    <div
+                    <Link
+                        activeClass="active"
+                        to={obj.url}
+                        spy={true}
+                        smooth={true}
+                        duration={800}
                         className="navbarBox"
                         key={index}
                         onClick={() => {
@@ -53,7 +60,7 @@ export const Navbar = ({
                     >
                         <p className="title">{obj.title}</p>
                         <p className="subtitle">{obj.subtitle}</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
             <div className="languageBox">

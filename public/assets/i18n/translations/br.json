@@ -2,7 +2,7 @@
     "navbar.frist": [
         "sobre",
         "###",
-        "/about"
+        "about"
     ],
     "navbar.second": [
         "projetos",
