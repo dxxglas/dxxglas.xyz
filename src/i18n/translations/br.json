@@ -1,0 +1,24 @@
+{
+    "test": "testei",
+    "navbar": {
+        "about": {
+            "title": "sobre",
+            "subtitle": "###",
+            "url": "sobre"
+        },
+        "projects": {
+            "title": "projetos",
+            "subtitle": "em breve",
+            "url":""
+        },
+        "close": "fechar"
+    },
+    "home": {
+        "title": "descobrindo outros mundos"
+    },
+    "about": {
+        "name": "Olá. Eu sou",
+        "text": "Sou artista, engenheiro de software e entusiasta em design.",
+        "contact": "entre em contato"
+    }
+}

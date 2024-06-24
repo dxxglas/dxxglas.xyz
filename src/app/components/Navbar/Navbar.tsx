@@ -10,7 +10,7 @@ export const Navbar = ({
     setNavbarStatus,
 }: {
     isOpen: boolean;
-    setNavbarStatus: any;
+    setNavbarStatus: React.Dispatch<React.SetStateAction<boolean>>;
 }): JSX.Element => {
     const { t, i18n } = useTranslation();
 
@@ -23,14 +23,14 @@ export const Navbar = ({
 
     const navbar = [
         {
-            title: t('navbar.frist', { returnObjects: true })[0],
-            subtitle: t('navbar.frist', { returnObjects: true })[1],
-            url: t('navbar.frist', { returnObjects: true })[2],
+            title: t('navbar.about.title'),
+            subtitle: t('navbar.about.subtitle'),
+            url: t('navbar.about.url'),
         },
         {
-            title: t('navbar.second', { returnObjects: true })[0],
-            subtitle: t('navbar.second', { returnObjects: true })[1],
-            url: t('navbar.second', { returnObjects: true })[2],
+            title: t('navbar.projects.title'),
+            subtitle: t('navbar.projects.subtitle'),
+            url: t('navbar.projects.url'),
         },
     ];
 
