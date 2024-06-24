@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.scss';
-import '../providers/i18n';
+import '../i18n/config';
 
 import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
